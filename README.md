@@ -12,3 +12,5 @@ Create a new environment
 ```
 conda create -p myenv python=3.8 -y
 ```
+
+Switch to heroku branch to see the deployment in Heroku
