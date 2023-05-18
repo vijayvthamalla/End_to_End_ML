@@ -1,5 +1,5 @@
-# End_to_End_ML
-Train a regression model, pickle it, load it and serve the model using Flask, Github, CICD, Google Cloud and Docker
+# Machine Learning model deployment
+Train a regression model, pickle it, load it and serve the model using Flask, Github, CICD, Heroku and Docker
 
 ### Software and Tools Required
 
