@@ -9,7 +9,7 @@ scaler = pickle.load(open('scaling.pkl','rb'))
 
 @app.route('/')
 def home():
-    return render_template('app.html')
+    return render_template('home.html')
 
 @app.route('/predict_api', methods=['POST'])
 def predict_api():
@@ -18,16 +18,13 @@ def predict_api():
     output = model.predict(new_data)
     return jsonify(output[0])
 
-@app.route('/predict/',methods=['POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     data = [float(x) for x in request.form.values()]
-    print(data)
     final_input = scaler.transform(np.array(data).reshape(1,-1))
-    print(final_input)
     final_output = model.predict(final_input)
-    print(final_output)
-    return render_template("predict.html",prediction=f"Predicted price of House based on given input is {final_output[0]:.2f}")
+    return render_template("home.html",prediction_text=f"Predicted price of House based on given input is {final_output[0]:.2f}")
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
 
