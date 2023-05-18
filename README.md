@@ -32,3 +32,21 @@ To deploy the model into GCP we made use of GCP cloud run and utilized cloud bui
 To deploy the model into Heroku, we utilized GitHub workflows to automatically deploy the code as soon as it is updated in GitHub.
 
 Switch to heroku branch to see the deployment in Heroku
+
+To run app using python on local environment
+```
+python app.py
+```
+access the application using 
+```
+http://localhost:5000
+```
+To build docker image
+```
+docker build -t myapp .
+```
+To run docker container
+```
+docker run -p 5000:5000 -d myapp
+```
+Once you successfully run the container, you can continue your deployment in GCP cloud run.
