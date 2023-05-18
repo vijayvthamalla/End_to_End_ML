@@ -1,4 +1,4 @@
-# Machine Leanring model deployment
+# Machine Learning model deployment
 Train a regression model, pickle it, load it and serve the model using Flask, Github, CICD, Heroku and Docker
 
 ### Software and Tools Required
