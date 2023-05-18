@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <title> Predict Housing Price </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+  </head>
+  <body>
+      <div class="container">
+        <div class="row my-5 pl-3">
+            <h1>Predict Housing Price</h1>
+        </div>
+        <!-- Starts form section -->
+        <div class="form-container ">
+            <form class="form-horizontal" action = "{{ url_for('predict')}}" method="post">
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="CRIM">CRIM:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="CRIM" name="CRIM">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="ZN">ZN:</label>
+                  <div class="col-sm-4">          
+                    <input type="text" class="form-control" id="ZN" name="ZN">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="INDUS">INDUS:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="INDUS" name="INDUS">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="CHAS">CHAS:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="CHAS" name="CHAS">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="NOX">NOX:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="NOX" name="NOX">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="RM">RM:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="RM" name="RM">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="Age">Age:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="Age" name="Age">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="DIS">DIS:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="DIS" name="DIS">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="RAD">RAD:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="RAD" name="RAD">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="TAX">TAX:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="TAX" name="TAX">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="PTRATIO">PTRATIO:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="PTRATIO" name="PTRATIO">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="B">B:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="B" name="B">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="LSTAT">LSTAT:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="LSTAT" name="LSTAT">
+                  </div>
+                </div>
+                <div class="form-group row"> 
+                <label class="control-label col-sm-2" for="">&nbsp;</label>                
+                  <div class="col-sm-offset-2 col-sm-4">
+                    <button type="submit" class="btn btn-primary">Predict</button>
+                  </div>
+                </div>
+              </form>
+            <!-- Ends form section -->
+        </div>
+    </div>
+  </body>
+</html>
